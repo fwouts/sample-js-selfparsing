@@ -8,6 +8,8 @@ let tsSourceFile = ts.createSourceFile(
   ts.ScriptTarget.Latest
 );
 for (let statement of tsSourceFile.statements) {
+  // This will be removed, and replaced with:
+  // console.log("Hello, World!");
   if (ts.isForOfStatement(statement)) {
     let forOfStatement = statement;
     forOfStatement.statement = ts.createStatement(
