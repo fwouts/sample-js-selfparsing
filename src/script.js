@@ -19,4 +19,9 @@ for (let statement of tsSourceFile.statements) {
     );
   }
 }
-console.log(ts.createPrinter().printFile(tsSourceFile));
+
+fs.writeFileSync(
+  __filename,
+  ts.createPrinter().printFile(tsSourceFile),
+  "utf8"
+);
