@@ -1,10 +1,9 @@
-import * as fs from "fs";
 import * as ts from "typescript";
 
 let sourceCode = "let a = /regexp/";
 
 let tsSourceFile = ts.createSourceFile(
-  __filename,
+  "script.js",
   sourceCode,
   ts.ScriptTarget.Latest
 );
